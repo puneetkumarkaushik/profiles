@@ -1,0 +1,13 @@
+body {
+	background-color: #f6e1e1;
+	font-family: monospace;
+}
+
+a {
+	background-color: #eb4d55;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 5px;
+}

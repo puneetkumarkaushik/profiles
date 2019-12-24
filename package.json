@@ -1,0 +1,15 @@
+{
+  "name": "max-assignment01",
+  "version": "1.0.0",
+  "description": "NodeJS application for adding and viewing users",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Puneet Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

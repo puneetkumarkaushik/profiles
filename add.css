@@ -1,0 +1,43 @@
+body {
+	background-color: #f6e1e1;
+	text-align: center;
+	font-family: monospace;
+	margin-top: 20px;
+}
+
+div {
+	width: 300px;
+	margin: auto;
+}
+
+a {
+	background-color: #eb4d55;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 5px;
+}
+
+form {
+	margin: 20px;
+	border-radius: 5px;
+	background-color: rgba(235, 77, 85, .4);
+	-webkit-box-shadow: 5px 5px 20px rgba(68, 68, 68, 0.6);
+}
+
+input {
+	margin: 10px 0;
+	height: 20px;
+}
+
+#add_profile {
+	background-color: #eb4d55;
+	text-decoration: none;
+	color: white;
+	margin: 20px;
+	border-radius: 5px;
+	border: none;
+	font-family: monospace;
+	width: 40px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profiles</title>
+		<link rel="stylesheet" type="text/css" href="./profiles.css">
+	</head>
+	<body>
+		<div>
+			<a href="/">Home</a>
+			<ul id="profiles"></ul>
+			<a href="/add">Add Profile</a>
+		</div>
+
+		<script type="text/javascript">
+			let list = document.getElementById('profiles');
+			let profiles = [];
+
+			fetch("http://localhost:3000/profiles")
+			.then(response => response.json())
+			.then(data => {
+				profiles = data.data;
+			})
+			.catch(console.log);
+
+			setTimeout(render, 100);
+
+			function render() {
+				profiles.forEach(profile => {
+					let item = document.createElement('li');
+
+					let div = document.createElement('div');
+					let img = document.createElement('img');
+					let name = document.createElement('h3');
+					let email = document.createElement('p');
+					let remove = document.createElement('a');
+
+					img.src = `https://robohash.org/${profile.email}?set=set4`;
+					img.alt = 'Photo';
+
+					name.innerHTML = profile.name;
+					email.innerHTML = profile.email;
+
+					remove.id = 'remove';
+					remove.innerHTML = 'X';
+					remove.href = '/remove?' + profile.id;
+
+					div.appendChild(img);
+					div.appendChild(name);
+					div.appendChild(email);
+					div.appendChild(remove);
+
+					item.appendChild(div);
+
+					list.appendChild(item);
+				});
+			}
+		</script>
+	</body>
+</html>
